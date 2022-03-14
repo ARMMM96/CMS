@@ -3,7 +3,7 @@
 $db['db_host'] = 'localhost';
 $db['db_user'] = 'root';
 $db['db_password'] = '';
-$db['db_name'] = '';
+$db['db_name'] = 'cms';
 
 
 foreach ($db as $key => $value) {
@@ -15,6 +15,6 @@ $connection = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
 
 
 
-if ($connection) {
-    echo "We are connected";
+if (!$connection) {
+    echo "Connection Error";
 }
